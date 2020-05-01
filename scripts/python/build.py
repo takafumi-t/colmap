@@ -304,12 +304,12 @@ def build_glew(args):
     if os.path.exists(path):
         return
 
-    url = "https://kent.dl.sourceforge.net/project/glew/" \
-          "glew/2.1.0/glew-2.1.0.zip"
-    archive_path = os.path.join(args.download_path, "glew-2.1.0.zip")
+    url = "https://sourceforge.net/projects/glew/files/glew/snapshots/" \
+          "glew-20190928.zip"
+    archive_path = os.path.join(args.download_path, "glew-20190928.zip")
     download_zipfile(url, archive_path, args.build_path,
-                     "dff2939fd404d054c1036cc0409d19f1")
-    shutil.move(os.path.join(args.build_path, "glew-2.1.0"), path)
+                     "74288ab714c5e6856baf212483b6192d")
+    shutil.move(os.path.join(args.build_path, "glew-2.2.0"), path)
 
     build_cmake_project(args, os.path.join(path, "build/cmake/__build__"))
 
